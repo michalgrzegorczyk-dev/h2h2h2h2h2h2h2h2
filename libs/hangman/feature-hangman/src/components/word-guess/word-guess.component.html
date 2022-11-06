@@ -1,0 +1,7 @@
+<div class="letters" *ngIf="guessedLetters">
+  <div class="letter" *ngFor="let letter of wordSplit$ | async">
+    <div *ngIf="guessedLetters.includes(letter)">
+      {{ letter }}
+    </div>
+  </div>
+</div>

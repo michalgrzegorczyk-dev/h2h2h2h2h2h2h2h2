@@ -1,0 +1,13 @@
+<hangman-status-display [lives]="lives$ | async"
+                        [maxLives]="maxLives$ | async"
+                        [level]="level$ | async"
+                        [maxLevel]="maxLevel$ | async">
+</hangman-status-display>
+
+<hangman-word-guess [word]="word$ | async"
+                    [guessedLetters]="guessedLetters$ | async">
+</hangman-word-guess>
+
+<hangman-keyboard [keyboard]="keyboard$ | async"
+                  (keyClicked)="onKeyClicked($event)">
+</hangman-keyboard>

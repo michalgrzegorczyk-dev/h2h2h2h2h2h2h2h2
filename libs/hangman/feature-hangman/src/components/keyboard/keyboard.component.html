@@ -1,0 +1,12 @@
+<div class="keyboard" *ngIf="keyboard && keyboard.keys">
+  <div class="keyboard__keys">
+
+    <button (click)="clickKey(key)"
+            class="key"
+            *ngFor="let key of keyboard.keys"
+            [disabled]="key.disabled">
+        {{key.value}}
+    </button>
+
+  </div>
+</div>

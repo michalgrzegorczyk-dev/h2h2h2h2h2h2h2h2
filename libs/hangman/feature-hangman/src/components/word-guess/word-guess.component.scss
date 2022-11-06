@@ -1,0 +1,15 @@
+.letters {
+  display: flex;
+  width: min-content;
+  gap: 0.8rem;
+  justify-content: space-between;
+  margin: 3rem auto;
+
+  .letter {
+    padding-bottom: 0.8rem;
+    border-bottom: 0.1rem solid #000;
+    min-width: 2rem;
+    min-height: 2rem;
+    text-align: center;
+  }
+}

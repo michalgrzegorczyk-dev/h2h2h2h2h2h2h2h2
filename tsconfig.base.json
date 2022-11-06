@@ -1,0 +1,34 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@hangman/hangman/domain": ["libs/hangman/domain/src/index.ts"],
+      "@hangman/hangman/feature-hangman": [
+        "libs/hangman/feature-hangman/src/index.ts"
+      ],
+      "@hangman/hangman/shell": ["libs/hangman/shell/src/index.ts"],
+      "@hangman/layout/feature-app-layout": [
+        "libs/layout/feature-app-layout/src/index.ts"
+      ],
+      "@hangman/layouts/feature-app-layout": [
+        "libs/layouts/feature-app-layout/src/index.ts"
+      ],
+      "@hangman/layouts/shell": ["libs/layouts/shell/src/index.ts"],
+      "@hangman/shell/feature": ["libs/shell/feature/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
