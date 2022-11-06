@@ -19,7 +19,6 @@ export class HangmanFacade {
   keyboard$ = this.store.select(HangmanSelectors.getKeyboard);
 
   constructor() {
-    this.store.select(HangmanSelectors.getHangmanState).subscribe(console.log);
     this.store.dispatch(HangmanActions.loadWords());
   }
 
