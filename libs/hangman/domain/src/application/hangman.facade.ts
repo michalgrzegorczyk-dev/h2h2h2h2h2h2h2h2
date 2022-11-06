@@ -19,16 +19,12 @@ export class HangmanFacade {
   keyboard$ = this.store.select(HangmanSelectors.getKeyboard);
 
   constructor() {
+    this.store.select(HangmanSelectors.getHangmanState).subscribe(console.log);
     this.store.dispatch(HangmanActions.loadWords());
   }
 
   addGuessedLetter(letter: string) {
     this.store.dispatch(HangmanActions.addGuessedLetter({ letter }))
-  }
-
-  gameOver() {
-    this.store.dispatch(HangmanActions.resetGame())
-    this.store.dispatch(HangmanActions.loadWords())
   }
 
   startNextRound() {
@@ -37,5 +33,6 @@ export class HangmanFacade {
 
   resetGame() {
     this.store.dispatch(HangmanActions.resetGame())
+    this.store.dispatch(HangmanActions.loadWords())
   }
 }

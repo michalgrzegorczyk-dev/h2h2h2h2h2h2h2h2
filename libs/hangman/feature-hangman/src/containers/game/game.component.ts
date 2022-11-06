@@ -37,7 +37,7 @@ export class GameComponent implements OnInit {
     this.isGameOver$.subscribe(isGameOver => {
       if (isGameOver) {
         alert('PRZEGRAŁEŚ');
-        this.hangmanFacade.gameOver();
+        this.hangmanFacade.resetGame();
       }
     });
   }
